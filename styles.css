@@ -1,0 +1,110 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4bd;
+}
+
+.step-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: auto;
+    margin-bottom: 20px;
+    background-color: rgba(230, 230, 230, 0.442);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.step {
+    min-width: 40%;
+    padding: 20px;
+    margin: 20px;
+    border-bottom: 1px solid #ddd;
+    background-color: rgba(187, 187, 187, 0.442);
+}
+
+.step h2 {
+    color: rgb(18, 105, 246);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#file-info {
+    margin-top: -10px;
+    color: rgb(0, 0, 0);
+}
+
+
+#format-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+select, input[type="text"] {
+    width: 48%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#display-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+#available-fields, #displayed-fields {
+    width: 150px;
+    height: 150px;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 4px;
+    padding: 8px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 4px;
+    font-size: larger;
+    border-width: 4px;
+}
+
+thead {
+    background-color: #cccccc;
+    color: rgb(18, 105, 246);
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    border-bottom: 1px solid rgb(0, 0, 0);
+}
+
+#table-body tr:nth-child(even) {
+    background-color: #f9f9f91c;
+}

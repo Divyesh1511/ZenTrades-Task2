@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display JSON Data</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="import-data">
+        <h1>Import Data</h1>
+    <div class="step-container">
+        <div class="step">
+            <h2>Step 1: Select File</h2>
+    <form id="jsonDataForm">
+        <label for="jsonFile">Upload File:</label>
+        <select id="file-type">
+            <option value="CSV">CSV</option>
+            <option value="JSON" selected>JSON</option>
+        </select>
+        <input type="file" id="jsonFile" accept=".json">
+        <button type="submit">Load Data</button>
+    </form>
+</div>
+
+<div class="step">
+    <h2>Step 2: Specify Format</h2>
+    <div id="format-section">
+        <label for="file-type">File Type:</label>
+        <select id="file-type">
+            <option value="CSV">CSV</option>
+            <option value="JSON" selected>JSON</option>
+        </select>
+        <br><br><br>
+        <label for="character-encoding">Character Encoding:</label>
+        <select id="character-encoding">
+            <option value="UTF-8" selected>UTF-8</option>
+        </select>
+        <br><br><br>
+        <label for="delimiter">Delimiter:</label>
+        <input type="text" id="delimiter" value="," />
+    </div>
+</div>
+
+
+<div class="step">
+    <h2>Step 3: Display Handling</h2>
+    <div id="container">
+        <label>Select fields to be displayed:</label><br>
+        <select id="availableFields" multiple>
+            <option value="productId">Product Id</option>
+            <option value="subcategory">Subcategory</option>
+            <option value="title">Title</option>
+            <option value="price">Price</option>
+            <option value="popularity">Popularity</option>
+            <option value="description">Description</option>
+            <option value="rating">Rating</option>
+            <option value="utmSource">UTM Source</option>
+            <option value="utmMedium">UTM Medium</option>
+        </select>
+
+        <div>
+            <button id ="addToDisplay" >>></button>
+            <button id = "removeFromDisplay"><<</button>
+        </div>
+
+        <select id="displayFields" multiple></select>
+    </div>
+</div>
+</div>
+
+    <h2>Displayed Data:</h2>
+    <table id="displayTable" style="display: none;">
+        <thead>
+            <tr id="tableHeaders"></tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+    </table>
+    <script src="script.js">
+    </script>
+</body>
+
+</html>
